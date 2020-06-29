@@ -1,8 +1,10 @@
 # Propagating Updates
 
-A discussion on updating an existing WSO2 product deployment in a container platform.
+This document depicts important information about updating an existing WSO2 product deployment in a container platform.
 
 ## Contents
+
+The following will be discussed in detail in the document.
 
 * [When do we need to update?](#when-do-we-need-to-update?)
 * [Simplest way to perform an update](#simplest-way-to-perform-an-update)
