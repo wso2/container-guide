@@ -15,7 +15,7 @@ The following will be discussed in detail in the document.
 The following are some of the scenarios which instigates the need for an update to an existing
 WSO2 product deployment in a container platform.
 
-* Integrate [WSO2 Updates](https://wso2.com/updates) containing an improvement or a bug fix
+* Be abreast with improvements and bug fixes by including [WSO2 Updates](https://wso2.com/updates)
 * A version migration of the used WSO2 product
 * Updates to configuration files and non-configuration artifacts (e.g. binaries such as, third-party libraries,
 Carbon extensions in the form of OSGi bundles, [Carbon Applications](https://docs.wso2.com/display/Carbon440/Working+with+Carbon+Applications)
