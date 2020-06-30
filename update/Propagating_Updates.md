@@ -40,7 +40,7 @@ Hence, the simplest way to perform an update to an existing WSO2 product deploym
    
 2. Perform a Helm based upgrade.
 
-   Kubernetes resources for WSO2 products utilize the most update strategy depending on the following factors.
+   Kubernetes resources for WSO2 products utilize the most appropriate update strategy depending on the following factors.
    
    * Involved WSO2 product profile
    * Achieve zero downtime during the update
