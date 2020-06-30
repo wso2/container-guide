@@ -28,7 +28,7 @@ or any security related artifacts such as, Java Keystore files)
 We recommend the use of [official WSO2 product Helm Charts](https://hub.helm.sh/charts/wso2) for production grade WSO2 product deployments
 in Kubernetes environments.
 
-The simplest way to perform an update to an existing WSO2 product deployment is to use a [Helm based upgrade](https://helm.sh/docs/helm/helm_upgrade/).
+Hence, the simplest way to perform an update to an existing WSO2 product deployment is to use a [Helm based upgrade](https://helm.sh/docs/helm/helm_upgrade/).
 
 1. Perform the required change(s).
 
