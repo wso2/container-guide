@@ -18,15 +18,13 @@ product deployments in Kubernetes environments. [Kubernetes Ingress resources](h
 are used to expose WSO2 product deployments in Kubernetes environment. Kubernetes Ingress resources are capable of
 determining traffic based on the host and path forwarded to them by backends. It also operates on the application
 layer of the network stack (HTTP) and can provide features like cookie-based session affinity and SSL terminations.
-WSO2 recommend [NGINX])(https://kubernetes.github.io/ingress-nginx/) as the Ingress controller for production grade 
+WSO2 recommend [NGINX](https://kubernetes.github.io/ingress-nginx/) as the Ingress controller for production grade 
 product deployments in Kubernetes environments.
 
 ### Configuring hostname
 
 For each WSO2 product that is exposed via the Ingress, must have a hostname. The hostname should be configured for
- each Ingress resource and for each WSO2 product configuration.
-
-
+each Ingress resource and for each WSO2 product configuration.
 
 ### DNS mapping
 
