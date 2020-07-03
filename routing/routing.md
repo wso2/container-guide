@@ -15,7 +15,7 @@ The following will be discussed in detail in the document.
 
 We recommend the use of [official WSO2 product Helm Charts](https://hub.helm.sh/charts/wso2) for production grade WSO2 
 product deployments in Kubernetes environments. [Kubernetes Ingress resources](https://kubernetes.io/docs/concepts/services-networking/ingress/)
-are used to expose expose WSO2 product services to outside of the Kubernetes environment.
+are used to expose WSO2 product services to outside of the Kubernetes environment.
 
 Kubernetes Ingress resources are capable of determining traffic based on the host and path forwarded to them by
 backends. It also operates on the application layer of the network stack (HTTP) and can provide features like cookie-based
@@ -34,7 +34,7 @@ each Ingress resource and for each WSO2 product configuration.
 In order to access the services that are exposed through the Ingress controller, it is required to add DNS mappings
  where each configured host name should be resolved to the Load balancer that fronts the Ingress controller. For
 testing purposes, it is possible to add host name mapping entries to the hosts file in the Operating system(For
- example, Ubuntu: /etc/hosts).
+ example, Ubuntu: `/etc/hosts`).
  
 ### Configuring SSL
 
