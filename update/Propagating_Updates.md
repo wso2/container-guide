@@ -48,8 +48,13 @@ Hence, the simplest way to perform an update to an existing WSO2 product deploym
 **Note:**
 > If you are not using Helm package manager to deploy WSO2 product Kubernetes resources, you may have to perform the
   update via Kubernetes client commands.
-> For example, in order to apply a configuration file change, you may have to recreate the existing ConfigMap corresponding
-  the changed file and perform a [Deployment rollout](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#updating-a-deployment).
+>
+> For example in order to apply a configuration file change,
+> - Recreate the existing ConfigMap corresponding to the changed file.
+> - If the deployment is based on a Kubernetes [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/),
+    perform a [rollout](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#updating-a-deployment).
+> - If the deployment is based on a Kubernetes [StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/),
+    perform a [rolling update](https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/#rolling-update).
 
 ### Achieve zero downtime
 
@@ -58,4 +63,14 @@ The most popular update strategy utilized by WSO2 product Kubernetes resources i
 Deployments and [StatefulSets](https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/#rolling-update)
 primarily adopt this strategy.
 
-The prime reason for adopting rolling update strategy is its ability to perform an update with zero downtime.
+As per official Kubernetes [documentation](https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/#rolling-update),
+a StatefulSet resource performs its rolling update process on each Pod sequentially by deleting the existing Pod prior to
+creation of the replacement, updated Pod. This may cause downtime for a given product profile service.
+
+But production recommended, official Kubernetes resources and Helm charts for WSO2 product deployments provide high availability support
+for a given WSO2 product profile, by default.
+
+Thus, the combined action of following factors ensure that a WSO2 product deployment maintains zero downtime during an upgrade.
+
+   * Rolling update strategy
+   * High availability support for a given WSO2 product profile
