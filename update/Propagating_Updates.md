@@ -40,7 +40,7 @@ Hence, the simplest way to perform an update to an existing WSO2 product deploym
    
 2. Perform a Helm based upgrade.
 
-   Kubernetes resources for WSO2 products utilize the most appropriate update strategy depending on the following factors.
+   Kubernetes resources for WSO2 products utilize the most appropriate update strategy for the given scenario, depending on the following factors.
    
    * Involved WSO2 product profile
    * Achieve zero downtime during the update
@@ -59,10 +59,3 @@ Deployments and [StatefulSets](https://kubernetes.io/docs/tutorials/stateful-app
 primarily adopt this strategy.
 
 The prime reason for adopting rolling update strategy is its ability to perform an update with zero downtime.
-
-**Notes:**
-> Apart from the rolling update strategy, we adopt [`OnDelete`](https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/#on-delete)
-for API Manager's Publisher and DevPortal profiles due to [this](https://github.com/wso2/kubernetes-apim/issues/397) issue.
-
-> This strategy involves user's manual intervention. In order to avoid downtime in deployments with high availability,
-it is recommended to perform the deletion of the relevant instances sequentially.
