@@ -1,6 +1,6 @@
 # Propagating Updates
 
-This document depicts important information about updating an existing WSO2 product deployment in a container platform.
+This chapter depicts important information about updating an existing WSO2 product deployment in a container platform.
 
 ## Contents
 
@@ -15,13 +15,21 @@ The following will be discussed in detail in the document.
 The following are some of the scenarios which instigates the need for an update to an existing
 WSO2 product deployment in a container platform.
 
-* Be abreast with improvements and bug fixes by including [WSO2 Updates](https://wso2.com/updates)
-* A version migration of the used WSO2 product
-* Updates to configuration files and non-configuration artifacts (e.g. binaries such as, third-party libraries,
-Carbon extensions in the form of OSGi bundles, [Carbon Applications](https://docs.wso2.com/display/Carbon440/Working+with+Carbon+Applications)
-or any security related artifacts such as, Java Keystore files)
-* Integrate changes to the container image source
-* Integrate changes to the container platform installation resources (e.g. Kubernetes resources or Helm Chart source)
+* Be abreast with product bug fixes and improvements by integrating [WSO2 Updates](https://wso2.com/updates)
+
+* Updates to configuration files
+
+* Updates to non-configuration resources
+
+  For example,
+    * Binaries such as, third-party libraries, Carbon extensions in the form of OSGi bundles, [Carbon Applications](https://docs.wso2.com/display/Carbon440/Working+with+Carbon+Applications)
+    * Any security related artifacts such as, Java Keystore files
+
+* Changes to installation resources
+
+  For example,
+    * Container image source
+    * Kubernetes/Helm resources
 
 ### Simplest way to perform an update
 
@@ -40,10 +48,7 @@ Hence, the simplest way to perform an update to an existing WSO2 product deploym
    
 2. Perform a Helm based upgrade.
 
-   Kubernetes resources for WSO2 products utilize the most appropriate update strategy for the given scenario, depending on the following factors.
-   
-   * Involved WSO2 product profile
-   * Achieve zero downtime during the update
+   Kubernetes resources for WSO2 products utilize the most appropriate update strategy for the given scenario, depending on the involved WSO2 product profile.
 
 **Note:**
 > If you are not using Helm package manager to deploy WSO2 product Kubernetes resources, you may have to perform the
@@ -51,26 +56,17 @@ Hence, the simplest way to perform an update to an existing WSO2 product deploym
 >
 > For example in order to apply a configuration file change,
 > - Recreate the existing ConfigMap corresponding to the changed file.
-> - If the deployment is based on a Kubernetes [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/),
-    perform a [rollout](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#updating-a-deployment).
-> - If the deployment is based on a Kubernetes [StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/),
-    perform a [rolling update](https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/#rolling-update).
+> - Perform a rollout to the [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#updating-a-deployment) /
+    [StatefulSet](https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/#rolling-update).
 
 ### Achieve zero downtime
 
 The most popular update strategy utilized by WSO2 product Kubernetes resources is of type,
-[rolling update](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/). Both resource types
-Deployments and [StatefulSets](https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/#rolling-update)
+[rolling update](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/). Both resource types,
+Deployment and [StatefulSet](https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/#rolling-update)
 primarily adopt this strategy.
 
-As per official Kubernetes [documentation](https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/#rolling-update),
-a StatefulSet resource performs its rolling update process on each Pod sequentially by deleting the existing Pod prior to
-creation of the replacement, updated Pod. This may cause downtime for a given product profile service.
-
-But production recommended, official Kubernetes resources and Helm charts for WSO2 product deployments provide high availability support
-for a given WSO2 product profile, by default.
-
-Thus, the combined action of following factors ensure that a WSO2 product deployment maintains zero downtime during an upgrade.
+The combined action of following factors ensure that a WSO2 product deployment maintains zero downtime during an update.
 
    * Rolling update strategy
    * High availability support for a given WSO2 product profile
