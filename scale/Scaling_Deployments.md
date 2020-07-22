@@ -19,16 +19,29 @@ scaling refers to increasing/decreasing the number of replicas of a given produc
 
 ### When do we need to scale?
 
-The primary reason that may instigate scaling of a WSO2 product profile is the need to evenly accommodate the
-client request load.
+Following events may instigate scaling of an existing WSO2 product profile.
+
+* The current throughput per second (TPS) handled by the system surpasses a defined threshold TPS that can be handled
+  via the available instances.
+
+* The current throughput per second (TPS) handled by the system decreases below a defined threshold TPS that can be handled
+  via the available instances.
 
 ### Scaling metrics
 
-Thus, throughput handled per unit time by an instance of a particular product profile can be considered the primary metric
-based on which it can be scaled.
+Thus, TPS handled by an instance of a particular product profile can be considered the primary metric considered for scaling.
 
-Further, factors such as CPU usage and memory usage of a given product profile instance can be considered useful metrics
-based on which scaling can be conducted.
+Also, secondary metrics such as CPU usage and memory usage of a given product profile instance can be considered.
+
+### Scaling strategies
+
+* Scaling based on CPU
+
+  WSO2 recommends auto scaling of profile instances to be configured with the average CPU threshold between 80%-90%.
+  
+* Scaling based on memory
+
+  WSO2 recommends auto scaling of profile instances to be configured with the average memory threshold between 80%-90%.
 
 ### Scaling WSO2 product profiles
 
@@ -44,9 +57,3 @@ It has to be noted that scalability differ based on the WSO2 product profile. Th
   A minimum high availability deployment of Stream Processor based deployment is not scalable more than 2 replicas.
   Please see official [documentation](https://docs.wso2.com/display/SP440/Minimum+High+Availability+Deployment)
   for advanced details about this.
-  
-### Scaling strategies
-
-* Scaling based on CPU
-
-  WSO2 recommends auto scaling of profile instances to be configured with the average CPU threshold between 80%-90%.
