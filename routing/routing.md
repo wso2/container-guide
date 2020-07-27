@@ -17,8 +17,8 @@ We recommend the use of [official WSO2 product Helm Charts](https://hub.helm.sh/
 product deployments in Kubernetes environments. [Kubernetes Ingress resources](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 are used to expose WSO2 product services to outside of the Kubernetes environment.
 
-Kubernetes Ingress resources are capable of determining traffic based on the host and path forwarded to them by
-backends. It also operates on the application layer of the network stack (HTTP) and can provide features like cookie-based
+Kubernetes Ingress Controller is capable of performing the identification of the backend based on the hostname and path.
+It also operates on the application layer of the network stack (HTTP) and can provide features like cookie-based
 session affinity and SSL terminations. 
 
 >WSO2 recommend [Community NGINX](https://kubernetes.github.io/ingress-nginx/) as the Ingress controller for production 
@@ -26,9 +26,9 @@ session affinity and SSL terminations.
 
 ### Configuring hostname
 
-For each WSO2 product that is exposed via the Ingress, must have a hostname. The hostname should be configured for
-each Ingress resource and for each WSO2 product configuration.
-
+For all the relevant WSO2 product profile services which need exposing to outside of the Kubernetes cluster have been
+ exposed to outside via appropriate hostnames and paths.
+ 
 ### DNS mapping
 
 In order to access the services that are exposed through the Ingress controller, it is required to add DNS mappings
@@ -50,7 +50,7 @@ There are two ways of configuring SSL termination for Ingress controller.
     * In this approach, all the services that are exposed should be configured with a host name within the wild card
      domain  
 1. Configure individual certificates for each host name
-    * In this approach, it is possible to have different host names for each exposed services where each Ingress is
+    * In this approach, it is possible to have different host name for each exposed service where each Ingress is
      configured with a certificate for a particular host name
      
 ### Tips on Session Affinity
