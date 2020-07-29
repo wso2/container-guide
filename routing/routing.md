@@ -5,7 +5,7 @@ This document depicts important information about configuring routing for an exi
  
 The following will be discussed in detail in the document.
 
-* [Exposing your application to outside](#exposing-your-application-to-outside )
+* [Exposing your application to outside](#exposing-your-application-to-outside)
 * [Configuring hostname](#configuring-hostname)
 * [DNS mapping](#dns-mapping)
 * [Configuring SSL](#configuring-ssl)
@@ -17,28 +17,33 @@ We recommend the use of [official WSO2 product Helm Charts](https://hub.helm.sh/
 product deployments in Kubernetes environments. [Kubernetes Ingress resources](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 are used to expose WSO2 product services to outside of the Kubernetes environment.
 
-Kubernetes Ingress Controller is capable of performing the identification of the backend based on the hostname and path.
-It also operates on the application layer of the network stack (HTTP) and can provide features like cookie-based
-session affinity and SSL terminations. 
+Kubernetes Ingress Controller is capable of performing the identification of the backend based on the hostname and
+path hostname and path of a given request. It also operates on the application layer of the network stack (HTTP) and
+can provide features like cookie-based session affinity and SSL terminations. 
 
 >WSO2 recommend [Community NGINX](https://kubernetes.github.io/ingress-nginx/) as the Ingress controller for production 
 >grade product deployments in Kubernetes environments.
 
 ### Configuring hostname
 
-For all the relevant WSO2 product profile services which need exposing to outside of the Kubernetes cluster have been
- exposed to outside via appropriate hostnames and paths.
- 
+For all the relevant WSO2 product profile services which need exposing to outside of the Kubernetes cluster must be 
+exposed to outside with appropriate hostnames.
+>In official WSO2 product Helm charts, hostnames can be configured via user input (via values.yaml) as per user preference.
+
 ### DNS mapping
 
-In order to access the services that are exposed through the Ingress controller, it is required to add DNS mappings
- where each configured host name should be resolved to the Load balancer that fronts the Ingress controller. For
-testing purposes, it is possible to add host name mapping entries to the hosts file in the Operating system(For
- example, Ubuntu: `/etc/hosts`).
+In order to access the services that are exposed through the Ingress controller, it is required to add DNS record
+mappings where each configured host name should be resolved to the Load balancer IP(EXTERNAL_IP) that fronts the Ingress
+controller. 
+
+If the defined hostnames are not backed by a DNS service, for the purpose of evaluation you may add an entry mapping the
+hostnames and the external IP in the client-side Operating system(For example, Ubuntu: `/etc/hosts`) as shown below.
+
+> \<EXTERNAL_IP>  <HOSTNAME_1>  <HOSTNAME_2>
  
 ### Configuring SSL
 
-It is recommended to do SSL termination at Load balancer in this case at Ingress controller. With this method, it is
+It is recommended to do SSL termination at load balancer in this case at Ingress controller. With this method, it is
 possible to manage production certificates for the entire Kubernetes cluster in a single location, the Ingress
 controller.
 
@@ -56,5 +61,6 @@ There are two ways of configuring SSL termination for Ingress controller.
 ### Tips on Session Affinity
 
 Some of the WSO2 products require to maintain the session of end user across subsequent HTTP calls. In a Kubernetes
-environment, **Session Affinity**  must be configured at Ingress resources. In **NGINX** ingress controller, **Cookie**
-based session affinity is used as the default.  
+environment, **Session Affinity**  must be configured at Ingress resources. 
+
+> In **NGINX** ingress controller, **Cookie** based session affinity is used as the default.  
