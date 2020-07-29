@@ -26,7 +26,7 @@ The Guide of Best Practices and Recommendations
     * [3.7. Deployment definition tips](https://github.com/wso2/container-guide) 
     * [3.8. Managing configurations](https://github.com/wso2/container-guide)  
     * [3.9. Managing keystores, certificates and other artifacts](https://github.com/wso2/container-guide)
-    * [3.10. Managing databases](hhttps://github.com/wso2/container-guide)
+    * [3.10. Managing databases](https://github.com/wso2/container-guide)
     * [3.11. Production deployment tips](https://github.com/wso2/container-guide)
     * [3.12. Managing security](https://github.com/wso2/container-guide)
 
