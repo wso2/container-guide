@@ -33,11 +33,11 @@ exposed to outside with appropriate hostnames.
 ### DNS mapping
 
 In order to access the services that are exposed through the Ingress controller, it is required to add DNS record
-mappings where each configured host name should be resolved to the Load balancer IP(EXTERNAL_IP) that fronts the Ingress
+mappings where each configured host name should be resolved to the load balancer IP(EXTERNAL_IP) that fronts the Ingress
 controller. 
 
 If the defined hostnames are not backed by a DNS service, for the purpose of evaluation you may add an entry mapping the
-hostnames and the external IP in the client-side Operating system(For example, Ubuntu: `/etc/hosts`) as shown below.
+hostnames and the external IP in the client-side Operating system(e.g, Ubuntu: `/etc/hosts`) as shown below.
 
 > \<EXTERNAL_IP>  <HOSTNAME_1>  <HOSTNAME_2>
  
@@ -54,7 +54,7 @@ There are two ways of configuring SSL termination for Ingress controller.
 1. Use a wild card certificate as the default certificate
     * In this approach, all the services that are exposed should be configured with a host name within the wild card
      domain  
-1. Configure individual certificates for each host name
+2. Configure individual certificates for each host name
     * In this approach, it is possible to have different host name for each exposed service where each Ingress is
      configured with a certificate for a particular host name
      
