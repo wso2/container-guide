@@ -37,7 +37,7 @@ mappings where each configured host name should be resolved to the load balancer
 controller. 
 
 If the defined hostnames are not backed by a DNS service, for the purpose of evaluation you may add an entry mapping the
-hostnames and the external IP in the client-side Operating system(e.g, Ubuntu: `/etc/hosts`) as shown below.
+hostnames and the external IP in the client-side Operating system(e.g., Ubuntu: `/etc/hosts`) as shown below.
 
 > \<EXTERNAL_IP>  <HOSTNAME_1>  <HOSTNAME_2>
  
