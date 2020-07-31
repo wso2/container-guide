@@ -26,7 +26,7 @@ for managing keystores prior to following this guide.
 As per aforementioned WSO2 [recommendations](https://docs.wso2.com/display/ADMIN44x/Using+Asymmetric+Encryption#UsingAsymmetricEncryption-recommendationsRecommendationsforsettingupkeystoresinWSO2products),
 it is often required to customize the default, WSO2 product keystore and truststore in a production grade deployment.
 
-The most appropriate approach for introducing a custom keystore or a truststore to a container based deployment is via
+The most appropriate approach for introducing a custom keystore or a truststore to a container based deployment is by using
 volume mounting.
 
 1. Prepare the custom Java keystore.
@@ -35,19 +35,18 @@ volume mounting.
    or [adding a Certificate Authority signed certificate to an existing keystore](https://docs.wso2.com/display/ADMIN44x/Creating+New+Keystores#CreatingNewKeystores-ca_certificateAddingCA-signedcertificatestokeystores)
    as per your preference.
    
-   Also, please follow the official [documentation](https://docs.wso2.com/display/ADMIN44x/Creating+New+Keystores#CreatingNewKeystores-Step3:Importingcertificatestothetruststore)
-   for guidelines required to import a certificate to a truststore.
+   To import certificates to a truststore, follow the official [documentation](https://docs.wso2.com/display/ADMIN44x/Creating+New+Keystores#CreatingNewKeystores-Step3:Importingcertificatestothetruststore).
    
 2. Add the keystore to the product container via a volume mount depending on the container platform.
 
    We recommend you to use the volume mount point allocated for non-configuration resources in WSO2 product containers
    (i.e. `/home/wso2carbon/wso2-artifact-volume`) for this purpose.
    
-   In Carbon Kernel version 4 based products, the default `wso2carbon.jks` keystore is located at the
+   In Carbon Kernel **version 4** based products, the default `wso2carbon.jks` keystore is located at the
    `<WSO2_PRODUCT_HOME>/repository/resources/security` directory. Thus, you may mount the volume containing the
    custom keystore to `/home/wso2carbon/wso2-artifact-volume/repository/resources/security` directory.
    
-   In Carbon Kernel version 5 based products, the default `wso2carbon.jks` keystore is located at the
+   In Carbon Kernel **version 5** based products, the default `wso2carbon.jks` keystore is located at the
    `<WSO2_PRODUCT_HOME>/resources/security` directory. Thus, you may mount the volume containing the custom keystore
    to `/home/wso2carbon/wso2-artifact-volume/resources/security` directory.
    
@@ -56,11 +55,11 @@ volume mounting.
    We recommend you to use the volume mount point allocated for non-configuration resources in WSO2 product containers
    (i.e. `/home/wso2carbon/wso2-artifact-volume`) for this purpose.
    
-   In Carbon Kernel version 4 based products, the default `client-truststore.jks` truststore is located at the
+   In Carbon Kernel **version 4** based products, the default `client-truststore.jks` truststore is located at the
    `<WSO2_PRODUCT_HOME>/repository/resources/security` directory. Thus, you may mount the volume containing the
    custom keystore to `/home/wso2carbon/wso2-artifact-volume/repository/resources/security` directory.
    
-   In Carbon Kernel version 5 based products, the default `client-truststore.jks` truststore is located at the
+   In Carbon Kernel **version 5** based products, the default `client-truststore.jks` truststore is located at the
    `<WSO2_PRODUCT_HOME>/resources/security` directory. Thus, you may mount the volume containing the custom keystore
    to `/home/wso2carbon/wso2-artifact-volume/resources/security` directory.
     
