@@ -66,5 +66,9 @@ volume mounting.
    > In Kubernetes based WSO2 product deployment, it is advisable that you use a ConfigMap resource to add the custom keystore
    > and truststore.
    > 
-   > * [Create a ConfigMap resource from the keystore file](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/#create-configmaps-from-files)
+   > * For further understanding peruse:
+   
+
+- [Create a ConfigMap resource from the keystore file](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/#create-configmaps-from-files)
+
    > * [Add the ConfigMap data to a volume](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/#add-configmap-data-to-a-volume)
