@@ -63,7 +63,7 @@ volume mounting.
    `<WSO2_PRODUCT_HOME>/resources/security` directory. Thus, you may mount the volume containing the custom keystore
    to `/home/wso2carbon/wso2-artifact-volume/resources/security` directory.
     
-   > In Kubernetes based WSO2 product deployments, we recommend you to use a ConfigMap resource to add the custom keystore
+   > In Kubernetes based WSO2 product deployment, it is advisable that you use a ConfigMap resource to add the custom keystore
    > and truststore.
    > 
    > * [Create a ConfigMap resource from the keystore file](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/#create-configmaps-from-files)
