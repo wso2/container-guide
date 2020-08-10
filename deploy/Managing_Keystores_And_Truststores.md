@@ -65,6 +65,8 @@ volume mounting.
     
    > In Kubernetes based WSO2 product deployment, it is advisable that you use a ConfigMap resource to add the custom keystore
    > and truststore.
+   >
+   > **Note:** Support for including binary data in Kubernetes ConfigMaps was introduced in version [`1.10`](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.10.md#apps).
    > 
    > For further understanding peruse:
    >
