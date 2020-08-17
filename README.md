@@ -4,7 +4,7 @@
 The Guide of Best Practices and Recommendations
 
 ## Table of Contents
-- ### [1. Building a container image](https://github.com/wso2/container-guide)
+- ### [1. Building a container image](https://github.com/wso2/container-guide/blob/master/build/Docker_as_Container_Runtime.md)
     * [1.1. Why should you choose Docker as your container runtime ?](https://github.com/wso2/container-guide)
     * [1.2. Using WSO2 images](https://github.com/wso2/container-guide)
     * [1.3. Building from source](https://github.com/wso2/container-guide)

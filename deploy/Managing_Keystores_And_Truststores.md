@@ -12,13 +12,13 @@ The following will be discussed in detail in the document.
 
 ### Asymmetric Encryption in WSO2 Products
 
-WSO2 products use asymmetric encryption by default for ensuring trust and secure tranfer of data. For advanced details,
-please refer the official WSO2 [documentation](https://docs.wso2.com/display/ADMIN44x/Using+Asymmetric+Encryption#UsingAsymmetricEncryption-setting_up_keystoresUsageofkeystoresinWSO2products).
+WSO2 products use asymmetric encryption by default to ensure trust and secure tranfer of data. For advanced details,
+refer the official WSO2 [documentation](https://docs.wso2.com/display/ADMIN44x/Using+Asymmetric+Encryption#UsingAsymmetricEncryption-setting_up_keystoresUsageofkeystoresinWSO2products).
 
 [Java keystores and truststores](https://docs.wso2.com/display/ADMIN44x/Using+Asymmetric+Encryption#UsingAsymmetricEncryption-Understandingkeystoresandtruststores)
 are used to store SSL certificates required for asymmetric encryption.
 
-Please refer to the official WSO2 [recommendations](https://docs.wso2.com/display/ADMIN44x/Using+Asymmetric+Encryption#UsingAsymmetricEncryption-recommendationsRecommendationsforsettingupkeystoresinWSO2products)
+Refer to the official WSO2 [recommendations](https://docs.wso2.com/display/ADMIN44x/Using+Asymmetric+Encryption#UsingAsymmetricEncryption-recommendationsRecommendationsforsettingupkeystoresinWSO2products)
 for managing keystores prior to following this guide.
 
 ### Manage Keystores and Truststores in Container Based Deployments
@@ -31,7 +31,7 @@ volume mounting to replace the default one with the custom one.
 
 1. Prepare the custom Java keystore or truststore.
 
-   Please follow the official guidelines for [creating a new keystore](https://docs.wso2.com/display/ADMIN44x/Creating+New+Keystores#CreatingNewKeystores-Creatinganewkeystore)
+   Follow the official guidelines for [creating a new keystore](https://docs.wso2.com/display/ADMIN44x/Creating+New+Keystores#CreatingNewKeystores-Creatinganewkeystore)
    or [adding a Certificate Authority signed certificate to an existing keystore](https://docs.wso2.com/display/ADMIN44x/Creating+New+Keystores#CreatingNewKeystores-ca_certificateAddingCA-signedcertificatestokeystores)
    as per your preference.
    
