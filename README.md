@@ -32,9 +32,9 @@ The Guide of Best Practices and Recommendations
     * [3.11. Production deployment tips](https://github.com/wso2/container-guide)
     * [3.12. Managing security](https://github.com/wso2/container-guide)
 
-- ### [4. Storage](https://github.com/wso2/container-guide)
-    * [4.1. Why do we need storage for WSO2 products ?](https://github.com/wso2/container-guide)
-    * [4.2. Recommended storage options for WSO2 products](https://github.com/wso2/container-guide)
+- ### [4. Storage](https://github.com/wso2/container-guide/blob/master/store)
+    * [4.1. Why do we need storage for WSO2 products ?](https://github.com/wso2/container-guide/blob/master/store/Persisting_And_Sharing.md#why-do-we-need-to-store?)
+    * [4.2. Recommended storage options for WSO2 products](https://github.com/wso2/container-guide/blob/master/store/Persisting_And_Sharing.md#recommended-storage-options-for-wso2-products)
     * [4.3. Storage binding tips](https://github.com/wso2/container-guide)
     * [4.4. Storage type and size](https://github.com/wso2/container-guide)
 
