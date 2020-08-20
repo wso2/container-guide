@@ -13,7 +13,7 @@ The following will be discussed in detail in the document.
 
 In the context of a WSO2 product deployment, the need for storage of artifacts arises due to the following reasons.
 
-* Persistence of created runtime artifacts
+* Persist created runtime artifacts
 
 * Share created runtime artifacts across multiple instances in deployments with high availability support
 
@@ -63,4 +63,4 @@ have been tested with along with corresponding [Kubernetes StorageClasses](https
 
   - WSO2 product deployments have been tested with [CephFS cluster deployed using the Rook Operator](https://rook.io/docs/rook/v1.3/ceph-quickstart.html).
     (please refer to instructions for [API Manager](https://github.com/wso2/kubernetes-apim/issues/410#issuecomment-654070688) and
-    [Identity Server](https://github.com/wso2/kubernetes-is/issues/240#issuecomment-654681300))
+    [Identity Server](https://github.com/wso2/kubernetes-is/issues/240#issuecomment-654681300)).
