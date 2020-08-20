@@ -61,6 +61,6 @@ have been tested with along with corresponding [Kubernetes StorageClasses](https
 
 * Ceph File System (CephFS)
 
-  - WSO2 product deployments have been tested with [CephFS cluster deployed using the Rook Operator](https://rook.io/docs/rook/v1.3/ceph-quickstart.html).
+  - WSO2 product deployments have been tested with [CephFS cluster deployed using the Rook Operator version `1.3`](https://rook.io/docs/rook/v1.3/ceph-quickstart.html).
     (please refer to instructions for [API Manager](https://github.com/wso2/kubernetes-apim/issues/410#issuecomment-654070688) and
     [Identity Server](https://github.com/wso2/kubernetes-is/issues/240#issuecomment-654681300)).
