@@ -17,7 +17,7 @@ In the context of WSO2 product deployment, the need for storage of artifacts ari
 
 * Share created runtime artifacts across multiple instances in deployments with high availability support
 
-> For example, in API Manager production deployment patterns, it is recommended to use a suitable storage option
+> For example, in WSO2 API Manager production deployment patterns, it is recommended to use a suitable storage option
   for the aforementioned purposes.
 >
 > Following are some such scenarios.
