@@ -27,7 +27,7 @@ In the context of WSO2 product deployment, the need for storage of artifacts ari
 >   - Persist and share API runtime artifacts (created in `<APIM_HOME>/repository/deployment/server/synapse-configs`) directory
 >     across multiple instances of the API Manager Gateway profile
 >
-> For advanced details on persistent runtime artifacts of API Manager, please refer to the official
+> For advanced details on persistent runtime artifacts of WSO2 API Manager, please refer to the official
 [documentation](https://apim.docs.wso2.com/en/latest/install-and-setup/setup/reference/common-runtime-and-configuration-artifacts/#persistent-runtime-artifacts).
 
 ### Recommended storage options for WSO2 products
