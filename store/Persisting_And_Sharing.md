@@ -57,7 +57,7 @@ have been tested along with the corresponding [Kubernetes StorageClasses](https:
     
   - WSO2 product deployments have been tried and tested with NFS based solutions like [Google FileStore](https://cloud.google.com/filestore)
     (please refer to instructions for [WSO2 API Manager](https://github.com/wso2/kubernetes-apim/issues/359#issuecomment-639729986) and
-    [Identity Server](https://github.com/wso2/kubernetes-is/issues/227#issuecomment-639735208)).
+    [WSO2 Identity Server](https://github.com/wso2/kubernetes-is/issues/227#issuecomment-639735208)).
 
 * Ceph File System (CephFS)
 
