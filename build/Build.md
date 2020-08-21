@@ -22,7 +22,7 @@ Started just 7 years ago in 2013, Docker introduced what would become the indust
 
 <img src="../imgs/build/docker-usage.jpg" width="550">
 
-Among many factors which led WSO2 to choose and recommend Docker as its first choice for a container runtime, following is key.
+Among many factors which led WSO2 to choose and recommend Docker as its first choice for a container runtime, following are key.
 
 * Docker’s ability to manage a complete container lifecycle.
 * Less learning curve and advanced feature set.
@@ -41,20 +41,20 @@ WSO2-curated product Docker images are available for usage from both :
 * Contains images built with the inclusion of GA released product packs and is publicly available for use free of charge.
 
 [2] [WSO2 Private Docker Registry, docker.wso2.com](https://docker.wso2.com/) : <br/>
-* Contains docker images built with the inclusion of regularly updated product packs and is accessible only for its subscribed customers. 
+* Contains Docker images built with the inclusion of regularly updated product packs and is accessible only for its subscribed customers. 
 
 WSO2 recommends using these images in containerized deployments of WSO2 products. This is mainly because WSO2 has aligned its Docker images with its recommended best practices for product deployments.
 
 Following are some of the key features of WSO2 product Docker images, which aligns them with WSO2-recommended best practices for container based product deployments:
 
-* *WSO2 recommends applying changes to the default configurations of a WSO2 product running inside a container via a volume mount. Our docker images support this feature via a dedicated volume mount by the name:* ```wso2-config-volume``` <br/> (Refer to [this article](https://medium.com/faun/wso2-products-dockerized-advanced-usage-part-1-ae255ef02661) for more details)
+* *WSO2 recommends applying changes to the default configurations of a WSO2 product running inside a container via a volume mount. Our Docker images support this feature via a dedicated volume mount by the name:* ```wso2-config-volume``` <br/> (Refer to [this article](https://medium.com/faun/wso2-products-dockerized-advanced-usage-part-1-ae255ef02661) for more details)
 
-* *WSO2 recommends introducing additional artifacts / non-configuration files (e.g. third-party libraries, Carbon extensions in the form <br/> of OSGi bundles, Carbon Applications or any security-related artifacts such as Java Keystore files) to a WSO2 product <br/>running inside a container via a volume mount. Our docker images support this feature via a dedicated volume <br/>mount by the name:* ```wso2-artifact-volume``` (Refer to [this article](https://medium.com/faun/wso2-products-dockerized-advanced-usage-part-2-9c851b0db557) for more details)
+* *WSO2 recommends introducing additional artifacts / non-configuration files (e.g. third-party libraries, Carbon extensions in the form <br/> of OSGi bundles, Carbon Applications or any security-related artifacts such as Java Keystore files) to a WSO2 product <br/>running inside a container via a volume mount. Our Docker images support this feature via a dedicated volume <br/>mount by the name:* ```wso2-artifact-volume``` (Refer to [this article](https://medium.com/faun/wso2-products-dockerized-advanced-usage-part-2-9c851b0db557) for more details)
 
-* *WSO2 recommends introducing patches (or hotfixes) to a WSO2 product running inside a container via a volume mount. <br/>Our docker images support this feature via a dedicated volume mount by the name:* ```wso2-patch-volume``` <br/>(Refer to [this article](https://medium.com/faun/wso2-products-dockerized-advanced-usage-part-2-9c851b0db557) for more details)
+* *WSO2 recommends introducing patches (or hotfixes) to a WSO2 product running inside a container via a volume mount. <br/>Our Docker images support this feature via a dedicated volume mount by the name:* ```wso2-patch-volume``` <br/>(Refer to [this article](https://medium.com/faun/wso2-products-dockerized-advanced-usage-part-2-9c851b0db557) for more details)
 
 * *Supports passing WSO2 product startup options.*
-(Refer to [this article](https://medium.com/faun/wso2-products-dockerized-remote-debug-dockerized-wso2-products-with-intellij-idea-111ca8ae60c) for more details)
+(Refer to [this article](https://medium.com/faun/wso2-products-dockerized-remote-debug-dockerized-wso2-products-with-intellij-idea-111ca8ae60c) as an example for more details)
 
 WSO2 has followed an array of [best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) and [guidelines](https://github.com/docker-library/official-images#review-guidelines) recommended by the Docker community during the implementation of its product Docker resources.
 
@@ -62,7 +62,7 @@ Some of the best practices and guidelines that are followed for Dockerfiles and 
 
 * *Minimized container image size:*
 
-    + *Minimizing the number instructions in the dockerfile that would create sizeable image layers,  leading to reduced image size.* <br/> (Refer to [this section](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#minimize-the-number-of-layers) for advanced details)
+    + *Minimizing the number instructions in the Dockerfile that would create sizeable image layers,  leading to reduced image size.* <br/> (Refer to [this section](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#minimize-the-number-of-layers) for advanced details)
 
     + *The product distribution pack and its dependencies are removed to prevent the Docker image size from increasing. <br/> Only the necessary software packages have been installed.* (Refer to [this section](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#dont-install-unnecessary-packages) for more details)
 
@@ -80,21 +80,22 @@ In case of an extension, WSO2 recommends using an official WSO2 product Docker i
 
 ## 1.3. Building from source
 
-In case if the preference is to build the images from source, since this gives you greater control over the image and the conditions <br/>affecting its security, WSO2 recommends referring to the official GitHub release of the Docker resources of the relevant <br/>WSO2 product to write your dockerfile and build a WSO2 product Docker image by source.
+In case if the preference is to build the images from source, since this gives you greater control over the image and the conditions <br/>affecting its security, WSO2 recommends referring to the official GitHub release of the Docker resources of the relevant <br/>WSO2 product to write your Dockerfile and build a WSO2 product Docker image by source.
 
-Also in case if your preferred JDK is different from the default that we pack, you can follow this approach to build your own docker image.
+Also in case if your preferred JDK is different from the default that we pack, you can follow this approach to build your own Docker image.
 
 Useful reference points:
 
 [1] [Docker resources for WSO2 API Management](https://github.com/wso2/docker-apim) <br/>
 [2] [Docker resources for WSO2 Integration](https://github.com/wso2/docker-ei) <br/>
-[3] [Docker resources for WSO2 Identity and Access Management](https://github.com/wso2/docker-is)
+[3] [Docker resources for WSO2 Identity and Access Management](https://github.com/wso2/docker-is) <br/>
+[4] [Docker resources for WSO2 Open Banking](https://github.com/wso2/docker-open-banking)
 
 <br/>
 
 ## 1.4. Tips to harden your image
 
-Key takeaways from our experience to write your dockerfile :
+Key takeaways from our experience to write your Dockerfile :
 
 ```
 [1] Verify Authenticity of any software installed in the image
@@ -110,7 +111,8 @@ Useful reference points:
 
 [1] [Docker resources for WSO2 API Management](https://github.com/wso2/docker-apim) <br/>
 [2] [Docker resources for WSO2 Integration](https://github.com/wso2/docker-ei) <br/>
-[3] [Docker resources for WSO2 Identity and Access Management](https://github.com/wso2/docker-is)
+[3] [Docker resources for WSO2 Identity and Access Management](https://github.com/wso2/docker-is) <br/>
+[4] [Docker resources for WSO2 Open Banking](https://github.com/wso2/docker-open-banking)
 
 <br/>
 
@@ -129,12 +131,12 @@ This queue can hold a maximum of 3 images from the oldest to the latest and each
 
         Unique tag: <product>:<version>.<wso2-update-timestamp>.<docker-tag-last-digit>
 
-This queue is regularly updated with a new image having an update (or in other words, a patch) either to the product or docker artifacts. When a new image is pushed, the oldest of the 3 is removed from the registry on a first-in-first-out (FIFO) basis. 
+This queue is regularly updated with a new image having an update (or in other words, a patch) either to the product or Docker artifacts. When a new image is pushed, the oldest of the 3 is removed from the registry on a first-in-first-out (FIFO) basis. 
 
 Unique tags are ideal in referring to an image during deployments and we recommend customers to use this tag when they directly use WSO2 images for their deployments without any customizations.
 
 [2] We also maintain one stable tag per each product version. <br/>
-A stable tag is always pointed to the latest docker image of a particular product version. 
+A stable tag is always pointed to the latest Docker image of a particular product version. 
 
 Taking the same example from [1], 
 
@@ -146,10 +148,10 @@ Taking the same example from [1],
 
         Stable tag: <product>:<version>
 
-Stable tags are ideal in referring to a base image during docker build. We recommend customers to use this tag when they want to build their custom images on top of the product docker images that we host.
+Stable tags are ideal in referring to a base image during Docker build. We recommend customers to use this tag when they want to build their custom images on top of the product Docker images that we host.
 
 [3] We maintain a latest tag per each product. <br/>
-The latest tag is also a stable tag and is always pointed to the latest docker image of a product repo.
+The latest tag is also a stable tag and is always pointed to the latest Docker image of a product repo.
 
 Taking the same example from [2], if 3.1.0 is the latest version of wso2am,
 
@@ -175,7 +177,7 @@ Key takeaways:
 
 If a container image includes a vulnerability, then every container generated using the image will also include that vulnerability. Hence it is really important that you scan the newly built image for any vulnerabilities prior to the promotion of the image into a registry.  
 
-Among many other alternative scanning tools, WSO2 uses and would also like to recommend [Clair](https://coreos.com/clair/docs/latest) for this purpose. Clair is an open source project for the static analysis of vulnerabilities in docker containers. Clair scans each container layer and provides a notification of vulnerabilities that may be a threat, based on the Common Vulnerabilities and Exposures database (CVE) and similar databases from Red Hat, Ubuntu, and Debian.
+Among many other alternative scanning tools, WSO2 uses and would also like to recommend [Clair](https://coreos.com/clair/docs/latest) for this purpose. Clair is an open source project for the static analysis of vulnerabilities in Docker containers. Clair scans each container layer and provides a notification of vulnerabilities that may be a threat, based on the Common Vulnerabilities and Exposures database (CVE) and similar databases from Red Hat, Ubuntu, and Debian.
 
 Additionally, the Center for Internet Security (CIS) has a [Docker Benchmark](https://www.cisecurity.org/benchmark/docker) for evaluating the security of a Docker container.
 
