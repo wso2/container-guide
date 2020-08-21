@@ -42,7 +42,7 @@ WSO2 recommends using the most suitable persistent storage solution depending on
   For this purpose, you may use any persistent storage solution supporting either `ReadWriteOnce` or `ReadWriteMany`
   [access modes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes).
 
-* Persist and share runtime artifacts runtime artifacts across multiple instances of a product profile
+* Persist and share runtime artifacts across multiple instances of a product profile
 
   For this purpose, you may use any persistent storage solution supporting `ReadWriteMany`
   [access mode](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes).
