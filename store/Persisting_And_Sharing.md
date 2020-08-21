@@ -48,7 +48,7 @@ WSO2 recommends using the most suitable persistent storage solution depending on
   [access mode](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes).
 
 The following is a list of storage options using with production grade WSO2 product deployments in Kubernetes environments that
-have been tested with along with corresponding [Kubernetes StorageClasses](https://kubernetes.io/docs/concepts/storage/storage-classes/).
+have been tested along with the corresponding [Kubernetes StorageClasses](https://kubernetes.io/docs/concepts/storage/storage-classes/).
 
 * Network File System (NFS)
 
