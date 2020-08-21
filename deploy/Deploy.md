@@ -16,7 +16,7 @@ The following will be discussed in detail in the document.
 
 Even though it is easy to manage, maintain, and run all your containers in a single node cluster this practice would lead to a single point of failure (if the node suddenly malfunctions due to some problems). As a result, it’s always advisable to divide your containers into two or more nodes in a cluster. However, depending on the load we not only have to increase the number of containers we manage, but we will also have to increase the number of nodes we manage for the cluster. Conversely, the higher the number of containers and nodes, the effort and complexity of managing the cluster increase in high proportions. Doing this manually is a daunting task and is highly error prone. 
 
-This is where a container orchestration platform comes into the picture as a solution to the problem. It can manage all of the bare metal machines or virtual machines on which you need to run your containers. Furthermore, it could also manage your containers by launching them on the underlying machines, making sure they are distributed, and keeping them healthy.
+This is where a container orchestration platform comes handy as a solution to the problem. It can manage all the bare metal machines and virtual machines on which you need to run your containers. Furthermore, it could also manage your containers by launching them on the underlying machines, making sure they are distributed, and keeping them healthy.
 
 <br/>
 
