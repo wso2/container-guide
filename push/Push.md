@@ -16,7 +16,7 @@ The following will be discussed in detail in the document.
 
 This is essential due to a couple of reasons:
 
-[1] A private container registry with scanning capabilities and role-based access control offers more security, governance and efficient management.
+[1] A private container registry with scanning capabilities and role-based access control offers leverage on security, governance, and management efficiency.
 
 [2] You do not have much control over the images stored in an external registry. New images could be added and already existing images could be removed from the registry at any time. For example, most registries of framework providers do not preserve all images they publish for a long time. 
 
