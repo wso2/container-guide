@@ -11,7 +11,7 @@ The following will be discussed in detail in the document.
 
 ### Why do we need to store?
 
-In the context of a WSO2 product deployment, the need for storage of artifacts arises due to the following reasons.
+In the context of WSO2 product deployment, the need for storage of artifacts arises due to the following reasons:
 
 * Persist created runtime artifacts
 
