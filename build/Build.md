@@ -177,7 +177,11 @@ Key takeaways:
 
 If a container image includes a vulnerability, then every container generated using the image will also include that vulnerability. Hence it is really important that you scan the newly built image for any vulnerabilities prior to the promotion of the image into a registry.  
 
-Among many other alternative scanning tools, WSO2 uses and would also like to recommend both [Trivy](https://github.com/aquasecurity/trivy) and [Clair](https://coreos.com/clair/docs/latest) for this purpose. Trivy is a simple and comprehensive vulnerability scanner for containers and other artifacts. Trivy detects vulnerabilities of OS packages (Alpine, RHEL, CentOS, etc.) and application dependencies (Bundler, Composer, npm, yarn, etc.). Clair is an open source project for the static analysis of vulnerabilities in Docker containers. Clair scans each container layer and provides a notification of vulnerabilities that may be a threat, based on the Common Vulnerabilities and Exposures database (CVE) and similar databases from Red Hat, Ubuntu, and Debian.
+Among many other alternative scanning tools, WSO2 uses and would also like to recommend both [Trivy](https://github.com/aquasecurity/trivy) and [Clair](https://coreos.com/clair/docs/latest) for this purpose. 
+
+Trivy: is a simple and comprehensive vulnerability scanner for containers and other artifacts. Trivy detects vulnerabilities of OS packages (Alpine, RHEL, CentOS, etc.) and application dependencies (Bundler, Composer, npm, yarn, etc.). 
+
+Clair: is an open source project for the static analysis of vulnerabilities in Docker containers. Clair scans each container layer and provides a notification of vulnerabilities that may be a threat, based on the Common Vulnerabilities and Exposures database (CVE) and similar databases from Red Hat, Ubuntu, and Debian.
 
 Additionally, the Center for Internet Security (CIS) has a [Docker Benchmark](https://www.cisecurity.org/benchmark/docker) for evaluating the security of a Docker container.
 
