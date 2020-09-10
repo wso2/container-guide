@@ -6,7 +6,7 @@ This chapter depicts important information about building your first WSO2 contai
 
 The following will be discussed in detail in the document.
 
-* [1.1. Why should you choose Docker as your container runtime ?](#Why-docker)
+* [1.1. Why should you choose Docker as your container runtime ?](#why-docker)
 * [1.2. Using WSO2 images](#using-wso2-images)
 * [1.3. Building from source](#building-from-source)
 * [1.4. Tips to harden your image](#tips-to-harden-your-image)
@@ -16,7 +16,7 @@ The following will be discussed in detail in the document.
 
 <br/>
 
-## 1.1. Why should you choose Docker as your container runtime ?
+## <a name="why-docker"></a>1.1. Why should you choose Docker as your container runtime ?
 
 Started just 7 years ago in 2013, Docker introduced what would become the industry standard for containers and is undeniably yet the defacto standard to build, share and run containerized apps. 
 

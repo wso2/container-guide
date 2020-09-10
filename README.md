@@ -13,7 +13,7 @@ The Guide of Best Practices and Recommendations
     * [1.6. Vulnerability scanning and container security check](https://github.com/wso2/container-guide)
     * [1.7. Image signing and Verification](https://github.com/wso2/container-guide)
 
-- ### [2. Pushing your image to a container registry](https://github.com/wso2/container-guide)
+- ### [2. Pushing your image to a container registry](./push/Push.md)
     * [2.1. Why should you have your own private registry ?](https://github.com/wso2/container-guide)
     * [2.2. How to secure your private registry ?](https://github.com/wso2/container-guide)
     * [2.3. Scanning and Auditing](https://github.com/wso2/container-guide) 
