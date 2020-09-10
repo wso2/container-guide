@@ -1,6 +1,6 @@
 # 2. Pushing your image to a container registry
 
-This chapter depicts important information about pushing your image to a container registry.
+This chapter describes why it is important to push your image to a container registry.
 
 ### Contents
 
