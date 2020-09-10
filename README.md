@@ -5,13 +5,13 @@ The Guide of Best Practices and Recommendations
 
 ## Table of Contents
 - ### [1. Building a container image](./build/Build.md)
-    * [1.1. Why should you choose Docker as your container runtime ?](https://github.com/wso2/container-guide)
-    * [1.2. Using WSO2 images](https://github.com/wso2/container-guide)
-    * [1.3. Building from source](https://github.com/wso2/container-guide)
-    * [1.4. Tips to harden your image](https://github.com/wso2/container-guide)
-    * [1.5. Tips on Tagging](https://github.com/wso2/container-guide)
-    * [1.6. Vulnerability scanning and container security check](https://github.com/wso2/container-guide)
-    * [1.7. Image signing and Verification](https://github.com/wso2/container-guide)
+    * [1.1. Why should you choose Docker as your container runtime ?](./build/Build.md#why-docker)
+    * [1.2. Using WSO2 images](./build/Build.md#using-wso2-images)
+    * [1.3. Building from source](./build/Build.md#building-from-source)
+    * [1.4. Tips to harden your image](./build/Build.md#tips-to-harden-your-image)
+    * [1.5. Tips on Tagging](./build/Build.md#tips-on-tagging)
+    * [1.6. Vulnerability scanning and container security check](./build/Build.md#scanning)
+    * [1.7. Image signing and Verification](./build/Build.md#signing)
 
 - ### [2. Pushing your image to a container registry](./push/Push.md)
     * [2.1. Why should you have your own private registry ?](https://github.com/wso2/container-guide)

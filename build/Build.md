@@ -33,7 +33,7 @@ Among many factors which led WSO2 to choose and recommend Docker as its first ch
 <img src="../imgs/build/docker-adoption.png" width="900">
 
 
-## 1.2. Using WSO2 images
+## <a name="using-wso2-images"></a>1.2. Using WSO2 images
 
 WSO2-curated product Docker images are available for usage from both :
 
@@ -78,7 +78,7 @@ In case of an extension, WSO2 recommends using an official WSO2 product Docker i
 
 <br/>
 
-## 1.3. Building from source
+## <a name="building-from-source"></a>1.3. Building from source
 
 In case if the preference is to build the images from source, since this gives you greater control over the image and the conditions <br/>affecting its security, WSO2 recommends referring to the official GitHub release of the Docker resources of the relevant <br/>WSO2 product to write your Dockerfile and build a WSO2 product Docker image by source.
 
@@ -93,7 +93,7 @@ Useful reference points:
 
 <br/>
 
-## 1.4. Tips to harden your image
+## <a name="tips-to-harden-your-image"></a>1.4. Tips to harden your image
 
 Key takeaways from our experience to write your Dockerfile :
 
@@ -116,7 +116,7 @@ Useful reference points:
 
 <br/>
 
-## 1.5. Tips on Tagging
+## <a name="tips-on-tagging"></a>1.5. Tips on Tagging
 
 WSO2 product docker image tagging strategy is simple.
 
@@ -173,7 +173,7 @@ Key takeaways:
 
 <br/>
 
-## 1.6. Vulnerability scanning and container security check
+## <a name="scanning"></a>1.6. Vulnerability scanning and container security check
 
 If a container image includes a vulnerability, then every container generated using the image will also include that vulnerability. Hence it is really important that you scan the newly built image for any vulnerabilities prior to the promotion of the image into a registry.  
 
@@ -189,7 +189,7 @@ Docker provides an open source script called [Docker Bench for Security](https:/
 
 <br/>
 
-## 1.7. Image signing and Verification
+## <a name="signing"></a>1.7. Image signing and Verification
 
 Whether you are using a private image registry in-house or a public registry such as Docker Hub, it's important to know that you are running only the code that you actually intend to run. The potential for malicious code or man-in-the-middle attacks on downloads is an important factor in protecting your container images.
 
