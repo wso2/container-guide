@@ -6,7 +6,7 @@ This chapter describes why it is important to push your image to a container reg
 
 The following will be discussed in detail in the document.
 
-* [2.1. Why should you have your own private registry ?](#hhy-private-registry)
+* [2.1. Why should you have your own private registry ?](#why-private-registry)
 * [2.2. How to secure your private registry ?](#how-to-secure)
 * [2.3. Scanning and Auditing](#scanning-auditing)
 
@@ -34,6 +34,6 @@ Secondly to provide access only to authorized personel even with in your organiz
 
 If an image includes a vulnerability, then every container generated using that image will also include that vulnerability. New images and newer versions of existing images may be pushed frequently into your private registry. Every change carries with it the possibility of introducing a new vulnerability - and all too often, an old vulnerability resulting from the use of an outdated software package.
 
-`Scanning` : You need to schedule regular scans of your repository in order to detect such vulnerabilities. Most of the organizations that maintain major public registries (such as Docker) provide their own scanning services. Even for private registries, there are a plenty of security providers to offer extended scanning capabilities, with key features such as scanning-results alerts, and automatically preventing images that are not trusted from being used.
+`Scanning` : You need to schedule regular scans of your repository in order to detect such vulnerabilities. Most of the organizations that maintain major public registries provide their own scanning services (such as [Docker](https://docs.docker.com/docker-hub/official_images/#official-image-vulnerability-scanning) for their official images). Even for private registries, there are a plenty of security providers to offer extended scanning capabilities, with key features such as scanning-results alerts, and automatically preventing images that are not trusted from being used.
 
 `Auditing` : You can (and should) go beyond scanning for vulnerabilities by auditing images for age, as well as outdated packages. You can flag older images and those with older dependencies as outdated and schedule them for updating. Adopting a policy of regularly updating and refreshing older images makes it easier to eliminate vulnerabilities which may have gone undetected.
