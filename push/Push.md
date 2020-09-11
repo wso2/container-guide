@@ -32,7 +32,7 @@ Secondly to provide access only to authorized personel even with in your organiz
 
 ## <a name="scanning-auditing"></a>2.3. Scanning and Auditing
 
-If an image includes a vulnerability, then every container generated using that image will also include that vulnerability. New images and newer versions of existing images may be pushed frequently into your private registry. Every change carries with it the possibility of introducing a new vulnerability — and all too often, an old vulnerability resulting from the use of an outdated software package.
+If an image includes a vulnerability, then every container generated using that image will also include that vulnerability. New images and newer versions of existing images may be pushed frequently into your private registry. Every change carries with it the possibility of introducing a new vulnerability - and all too often, an old vulnerability resulting from the use of an outdated software package.
 
 `Scanning` : You need to schedule regular scans of your repository in order to detect such vulnerabilities. Most of the organizations that maintain major public registries (such as Docker) provide their own scanning services. Even for private registries, there are a plenty of security providers to offer extended scanning capabilities, with key features such as scanning-results alerts, and automatically preventing images that are not trusted from being used.
 

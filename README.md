@@ -14,9 +14,9 @@ The Guide of Best Practices and Recommendations
     * [1.7. Image signing and Verification](./build/Build.md#signing)
 
 - ### [2. Pushing your image to a container registry](./push/Push.md)
-    * [2.1. Why should you have your own private registry ?](./push/Push.md)
-    * [2.2. How to secure your private registry ?](./push/Push.md)
-    * [2.3. Scanning and Auditing](./push/Push.md) 
+    * [2.1. Why should you have your own private registry ?](./push/Push.md#why-private-registry)
+    * [2.2. How to secure your private registry ?](./push/Push.md#how-to-secure)
+    * [2.3. Scanning and Auditing](./push/Push.md#scanning-auditing) 
 
 - ### [3. Deploying into production](./deploy/Deploy.md)
     * [3.1. Why do you need a container orchestrator ?](./deploy/Deploy.md)
