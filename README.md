@@ -36,7 +36,7 @@ The Guide of Best Practices and Recommendations
     * [4.1. Why do we need storage for WSO2 products ?](./store/Persisting_And_Sharing.md#why-do-we-need-to-store?)
     * [4.2. Recommended storage options for WSO2 products](./store/Persisting_And_Sharing.md#recommended-storage-options-for-wso2-products)
     * [4.3. Storage binding tips](./store/Persisting_And_Sharing.md)
-    * [4.4. Storage type and size](./store/Persisting_And_Sharing.md)sss
+    * [4.4. Storage type and size](./store/Persisting_And_Sharing.md)
 
 - ### [5. Routing](./route/Routing.md)
     * [5.1. Exposing your application to outside](./route/Routing.md#exposing-your-application-to-outside)
