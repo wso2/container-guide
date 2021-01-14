@@ -6,13 +6,13 @@ This chapter depicts important information about deploying your images into prod
 
 The following will be discussed in detail in the document.
 
-* [3.1. Why do you need a container orchestrator ?]
-* [3.2. Why should you choose Kubernetes ?]
-* [3.3. Kubernetes Vs. OpenShift ?]
+* [3.1. Why do you need a container orchestrator ?](#why-orchestrator)
+* [3.2. Why should you choose Kubernetes ?](#why-kubernetes)
+* [3.3. Kubernetes Vs. OpenShift ?](#kubernetes-openshift)
 
 <br/>
 
-## 3.1. Why do you need a container orchestrator ?
+## <a name="why-orchestrator"></a>3.1. Why do you need a container orchestrator ?
 
 Even though it is easy to manage, maintain, and run all your containers in a single node cluster this practice would lead to a single point of failure (if the node suddenly malfunctions due to some problems). As a result, it’s always advisable to divide your containers into two or more nodes in a cluster. However, depending on the load we not only have to increase the number of containers we manage, but we will also have to increase the number of nodes we manage for the cluster. Conversely, the higher the number of containers and nodes, the effort and complexity of managing the cluster increase in high proportions. Doing this manually is a daunting task and is highly error prone. 
 
@@ -20,7 +20,7 @@ This is where a container orchestration platform comes handy as a solution to th
 
 <br/>
 
-## 3.2. Why should you choose Kubernetes ?
+## <a name="why-kubernetes"></a>3.2. Why should you choose Kubernetes ?
 
 When it comes to the three leading container orchestration platforms, i.e., Mesos, Kubernetes, and Docker Swarm, Kubernetes is the undisputed leader due to the following reasons:
 
